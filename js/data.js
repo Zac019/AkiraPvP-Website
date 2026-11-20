@@ -16,8 +16,9 @@ window.SITE = {
   ],
   factions: [{name:"Alpha",pts:2551},{name:"Bravo",pts:838},{name:"Charlie",pts:274}],
   posts: [
-    {slug:"apertura",title:"Gran apertura de la temporada",date:"2026-11-18",tag:"Anuncio",accent:"#fa0",text:"Abrimos Practice, Kitmap y Meetup con nuevos kits y mapas."},
     {slug:"parche-1",title:"Parche 1.1: balance de kits",date:"2026-11-10",tag:"Parche",accent:"#e65555",text:"Ajustes de daño, cooldowns de perlas y correcciones."},
+    {slug:"apertura",title:"Gran apertura de la temporada",date:"2026-11-18",tag:"Anuncio",accent:"#fa0",text:"Abrimos Practice, Kitmap y HCF con nuevos kits y mapas."},
+    {slug:"evento",title:"Evento de apertura: Practice",date:"2026-11-19",tag:"Evento",accent:"#0af",text:"Durante la primera semana, tendremos eventos especiales."}
   
   ],
   store: [
@@ -27,8 +28,8 @@ window.SITE = {
   ],
   pass: Array.from({length:10},(_,i)=>({lvl:i+1,free:["Kit cosmético","100 monedas","Tag","—","Partícula"][i%5],premium:["Capa","300 monedas","Skin de espada","Efecto de muerte","Título"][i%5]})),
   bans: [
-    {player:"Cheater1",type:"Ban",reason:"Hacks (KillAura)",staff:"Staff1",date:"2026-11-19",until:"Permanente"},
-    {player:"Toxico2",type:"Mute",reason:"Insultos",staff:"Staff2",date:"2026-11-18",until:"7 días"},
-    {player:"Bug3",type:"Ban",reason:"Abuso de bugs",staff:"Staff1",date:"2026-11-16",until:"30 días"}
+    {player:"KP_ZK",type:"Ban",reason:"Hacks (KillAura)",staff:"19K2",date:"2026-11-19",until:"Permanente"},
+    {player:"D34M",type:"Ban",reason:"Insultos",staff:"SoyUnRex0",date:"2026-11-18",until:"7 días"},
+    {player:"HCFAlerts",type:"Ban",reason:"Negro",staff:"Tuseado",date:"2026-11-16",until:"30 días"}
   ]
 };
