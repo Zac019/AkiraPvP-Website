@@ -166,7 +166,7 @@
         --default-font-family: var(--font-geist), system-ui, sans-serif;
         --default-mono-font-family: var(--font-geist-mono), ui-monospace, monospace;
         --font-display: var(--font-geist), system-ui, sans-serif;
-        --color-gold: #fa0;
+        --color-gold: #ff2d2d;
         --color-ok: #55e07a;
         --color-danger: #f55;
         --color-mute: #aaa;
@@ -451,7 +451,7 @@
         border-radius: inherit;
         pointer-events: none;
         opacity: 0;
-        background: radial-gradient(360px circle at var(--mx,50%) var(--my,0%), #ffaa0029, transparent 65%);
+        background: radial-gradient(360px circle at var(--mx,50%) var(--my,0%), #ff2d2d29, transparent 65%);
         transition: opacity .24s var(--ease-out-strong);
         position: absolute;
         inset: 0
@@ -505,7 +505,7 @@
     }
 
     .glow-gold {
-        --glow: #ffaa0029
+        --glow: #ff2d2d29
     }
 
     .glow-ok {
@@ -513,7 +513,7 @@
     }
 
     .glow-aqua {
-        --glow: #55e6e624
+        --glow: #ff7a7a24
     }
 
     .glow-data {
@@ -1977,7 +1977,7 @@
     }
 
     .\!border-gold\/50 {
-        border-color: #ffaa0080!important;
+        border-color: #ff2d2d80!important;
         border-color: lab(76.7193% 25.0341 79.7893/.5)!important
     }
 
@@ -2051,11 +2051,11 @@
     }
 
     .border-brand {
-        border-color: #fa0
+        border-color: #ff2d2d
     }
 
     .border-brand\/30 {
-        border-color: #ffaa004d;
+        border-color: #ff2d2d4d;
         border-color: lab(76.7193% 25.0341 79.7893/.3)
     }
 
@@ -2108,11 +2108,11 @@
     }
 
     .border-gold {
-        border-color: #fa0
+        border-color: #ff2d2d
     }
 
     .border-gold\/30 {
-        border-color: #ffaa004d;
+        border-color: #ff2d2d4d;
         border-color: lab(76.7193% 25.0341 79.7893/.3)
     }
 
@@ -2228,7 +2228,7 @@
     }
 
     .\!border-l-aqua {
-        border-left-color: #55e6e6!important
+        border-left-color: #ff7a7a!important
     }
 
     .\!border-l-border {
@@ -2244,7 +2244,7 @@
     }
 
     .\!border-l-gold {
-        border-left-color: #fa0!important
+        border-left-color: #ff2d2d!important
     }
 
     .\!border-l-mute {
@@ -2333,7 +2333,7 @@
     }
 
     .bg-\[\#FFAA00\] {
-        background-color: #fa0
+        background-color: #ff2d2d
     }
 
     .bg-\[\#FFE066\] {
@@ -2395,16 +2395,16 @@
     }
 
     .bg-aqua {
-        background-color: #55e6e6
+        background-color: #ff7a7a
     }
 
     .bg-aqua\/10 {
-        background-color: #55e6e61a;
+        background-color: #ff7a7a1a;
         background-color: lab(83.7284% -39.8661 -12.1167/.1)
     }
 
     .bg-aqua\/15 {
-        background-color: #55e6e626;
+        background-color: #ff7a7a26;
         background-color: lab(83.7284% -39.8661 -12.1167/.15)
     }
 
@@ -2487,20 +2487,20 @@
     }
 
     .bg-brand {
-        background-color: #fa0
+        background-color: #ff2d2d
     }
 
     .bg-brand-soft {
-        background-color: #ffaa0024
+        background-color: #ff2d2d24
     }
 
     .bg-brand\/10 {
-        background-color: #ffaa001a;
+        background-color: #ff2d2d1a;
         background-color: lab(76.7193% 25.0341 79.7893/.1)
     }
 
     .bg-brand\/15 {
-        background-color: #ffaa0026;
+        background-color: #ff2d2d26;
         background-color: lab(76.7193% 25.0341 79.7893/.15)
     }
 
@@ -2597,16 +2597,16 @@
     }
 
     .bg-gold {
-        background-color: #fa0
+        background-color: #ff2d2d
     }
 
     .bg-gold\/10 {
-        background-color: #ffaa001a;
+        background-color: #ff2d2d1a;
         background-color: lab(76.7193% 25.0341 79.7893/.1)
     }
 
     .bg-gold\/15 {
-        background-color: #ffaa0026;
+        background-color: #ff2d2d26;
         background-color: lab(76.7193% 25.0341 79.7893/.15)
     }
 
@@ -2869,7 +2869,7 @@
     }
 
     .from-gold\/15 {
-        --tw-gradient-from: #ffaa0026;
+        --tw-gradient-from: #ff2d2d26;
         --tw-gradient-stops: var(--tw-gradient-via-stops,var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position))
     }
 
@@ -2886,7 +2886,7 @@
     }
 
     .via-gold\/5 {
-        --tw-gradient-via: #ffaa000d;
+        --tw-gradient-via: #ff2d2d0d;
         --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
         --tw-gradient-stops: var(--tw-gradient-via-stops)
     }
@@ -3516,7 +3516,7 @@
     }
 
     .text-\[\#55E6E6\] {
-        color: #55e6e6
+        color: #ff7a7a
     }
 
     .text-\[\#55E07A\] {
@@ -3540,7 +3540,7 @@
     }
 
     .text-\[\#FFAA00\] {
-        color: #fa0
+        color: #ff2d2d
     }
 
     .text-\[\#facc15\] {
@@ -3568,7 +3568,7 @@
     }
 
     .text-aqua {
-        color: #55e6e6
+        color: #ff7a7a
     }
 
     .text-black {
@@ -3580,11 +3580,11 @@
     }
 
     .text-brand {
-        color: #fa0
+        color: #ff2d2d
     }
 
     .text-brand-soft-foreground {
-        color: #ffbf40
+        color: #ff5a5a
     }
 
     .text-danger {
@@ -3623,7 +3623,7 @@
     }
 
     .text-gold {
-        color: #fa0
+        color: #ff2d2d
     }
 
     .text-inverse-foreground {
@@ -3631,7 +3631,7 @@
     }
 
     .text-link {
-        color: #fa0
+        color: #ff2d2d
     }
 
     .text-muted {
@@ -3739,7 +3739,7 @@
     }
 
     .accent-\[\#FFAA00\] {
-        accent-color: #fa0
+        accent-color: #ff2d2d
     }
 
     .accent-\[var\(--accent\)\] {
@@ -3780,7 +3780,7 @@
     }
 
     .shadow-\[-24px_36px_60px_-20px_rgba\(0\,0\,0\,0\.9\)\,0_0_80px_rgba\(255\,170\,0\,0\.18\)\] {
-        --tw-shadow: -24px 36px 60px -20px var(--tw-shadow-color,#000000e6), 0 0 80px var(--tw-shadow-color,#ffaa002e);
+        --tw-shadow: -24px 36px 60px -20px var(--tw-shadow-color,#000000e6), 0 0 80px var(--tw-shadow-color,#ff2d2d2e);
         box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)
     }
 
@@ -3790,7 +3790,7 @@
     }
 
     .shadow-\[0_0_12px_rgba\(255\,170\,0\,0\.5\)\] {
-        --tw-shadow: 0 0 12px var(--tw-shadow-color,#ffaa0080);
+        --tw-shadow: 0 0 12px var(--tw-shadow-color,#ff2d2d80);
         box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)
     }
 
@@ -3810,12 +3810,12 @@
     }
 
     .shadow-\[0_0_70px_-12px_rgba\(255\,170\,0\,0\.35\)\] {
-        --tw-shadow: 0 0 70px -12px var(--tw-shadow-color,#ffaa0059);
+        --tw-shadow: 0 0 70px -12px var(--tw-shadow-color,#ff2d2d59);
         box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)
     }
 
     .shadow-\[0_4px_14px_rgba\(255\,170\,0\,0\.25\)\] {
-        --tw-shadow: 0 4px 14px var(--tw-shadow-color,#ffaa0040);
+        --tw-shadow: 0 4px 14px var(--tw-shadow-color,#ff2d2d40);
         box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)
     }
 
@@ -3855,12 +3855,12 @@
     }
 
     .shadow-\[inset_0_1px_0_rgba\(255\,255\,255\,0\.5\)\,0_8px_20px_-8px_rgba\(85\,230\,230\,0\.5\)\] {
-        --tw-shadow: inset 0 1px 0 var(--tw-shadow-color,#ffffff80), 0 8px 20px -8px var(--tw-shadow-color,#55e6e680);
+        --tw-shadow: inset 0 1px 0 var(--tw-shadow-color,#ffffff80), 0 8px 20px -8px var(--tw-shadow-color,#ff7a7a80);
         box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)
     }
 
     .shadow-\[inset_0_1px_0_rgba\(255\,255\,255\,0\.5\)\,0_8px_20px_-8px_rgba\(255\,170\,0\,0\.55\)\] {
-        --tw-shadow: inset 0 1px 0 var(--tw-shadow-color,#ffffff80), 0 8px 20px -8px var(--tw-shadow-color,#ffaa008c);
+        --tw-shadow: inset 0 1px 0 var(--tw-shadow-color,#ffffff80), 0 8px 20px -8px var(--tw-shadow-color,#ff2d2d8c);
         box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)
     }
 
@@ -4004,7 +4004,7 @@
     }
 
     .ring-brand {
-        --tw-ring-color: #fa0
+        --tw-ring-color: #ff2d2d
     }
 
     .ring-danger\/20 {
@@ -4038,7 +4038,7 @@
     }
 
     .ring-gold {
-        --tw-ring-color: #fa0
+        --tw-ring-color: #ff2d2d
     }
 
     .ring-success\/20 {
@@ -4123,7 +4123,7 @@
     }
 
     .drop-shadow-\[0_0_10px_rgba\(255\,170\,0\,0\.7\)\] {
-        --tw-drop-shadow-size: drop-shadow(0 0 10px var(--tw-drop-shadow-color,#ffaa00b3));
+        --tw-drop-shadow-size: drop-shadow(0 0 10px var(--tw-drop-shadow-color,#ff2d2db3));
         --tw-drop-shadow: var(--tw-drop-shadow-size);
         filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,)
     }
@@ -4379,7 +4379,7 @@
         }
 
         .group-hover\:text-brand:is(:where(.group):hover *) {
-            color: #fa0
+            color: #ff2d2d
         }
 
         .group-hover\:text-foreground:is(:where(.group):hover *) {
@@ -4387,7 +4387,7 @@
         }
 
         .group-hover\:text-gold:is(:where(.group):hover *) {
-            color: #fa0
+            color: #ff2d2d
         }
 
         .group-hover\:text-inverse-foreground:is(:where(.group):hover *) {
@@ -4395,7 +4395,7 @@
         }
 
         .group-hover\:text-link:is(:where(.group):hover *) {
-            color: #fa0
+            color: #ff2d2d
         }
 
         .group-hover\:ring-gold\/60:is(:where(.group):hover *) {
@@ -4436,7 +4436,7 @@
     }
 
     .focus-within\:ring-focus:focus-within {
-        --tw-ring-color: #fa0
+        --tw-ring-color: #ff2d2d
     }
 
     @media (hover: hover) {
@@ -4470,7 +4470,7 @@
         }
 
         .hover\:border-gold:hover {
-            border-color: #fa0
+            border-color: #ff2d2d
         }
 
         .hover\:border-gold\/60:hover {
@@ -4508,11 +4508,11 @@
         }
 
         .hover\:bg-gold-hover:hover {
-            background-color: #ffbf40
+            background-color: #ff5a5a
         }
 
         .hover\:bg-gold\/15:hover {
-            background-color: #ffaa0026;
+            background-color: #ff2d2d26;
             background-color: lab(76.7193% 25.0341 79.7893/.15)
         }
 
@@ -4640,11 +4640,11 @@
         }
 
         .hover\:text-gold:hover {
-            color: #fa0
+            color: #ff2d2d
         }
 
         .hover\:text-gold-hover:hover {
-            color: #ffbf40
+            color: #ff5a5a
         }
 
         .hover\:text-inverse-foreground:hover {
@@ -4652,7 +4652,7 @@
         }
 
         .hover\:text-link:hover {
-            color: #fa0
+            color: #ff2d2d
         }
 
         .hover\:underline:hover {
@@ -4719,7 +4719,7 @@
     }
 
     .focus\:border-accent:focus {
-        border-color: #fa0
+        border-color: #ff2d2d
     }
 
     .focus\:border-danger:focus {
@@ -4727,7 +4727,7 @@
     }
 
     .focus\:border-gold:focus {
-        border-color: #fa0
+        border-color: #ff2d2d
     }
 
     .focus\:border-ok:focus {
@@ -4740,7 +4740,7 @@
     }
 
     .focus\:ring-accent:focus {
-        --tw-ring-color: #fa0
+        --tw-ring-color: #ff2d2d
     }
 
     .focus\:ring-accent\/20:focus {
@@ -4778,7 +4778,7 @@
     }
 
     .focus-visible\:ring-focus:focus-visible,.focus-visible\:ring-gold:focus-visible {
-        --tw-ring-color: #fa0
+        --tw-ring-color: #ff2d2d
     }
 
     .focus-visible\:ring-offset-2:focus-visible {
@@ -5366,10 +5366,10 @@
     --muted: #aaa;
     --border: #2e2e38;
     --separator: #2e2e38;
-    --brand: #fa0;
-    --accent-amber: #fa0;
+    --brand: #ff2d2d;
+    --accent-amber: #ff2d2d;
     --accent-mint: #55e07a;
-    --accent-lavender: #55e6e6;
+    --accent-lavender: #ff7a7a;
     --elev-1: inset 0 1px 0 #ffffff0d, 0 8px 16px -10px #0009, 0 24px 40px -28px #000000e6;
     --elev-2: inset 0 1px 0 #ffffff14, 0 12px 24px -12px #000000b3, 0 32px 56px -28px #000000f2;
     --elev-3: inset 0 1px 0 #ffffff1a, 0 4px 10px -4px #000c, 0 14px 28px -16px #000000e6;
@@ -5383,7 +5383,7 @@ body {
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     background-color: #0b0c0e;
-    background-image: radial-gradient(900px at 50% -10%,#ffaa0014,#0000 70%);
+    background-image: radial-gradient(900px at 50% -10%,#ff2d2d14,#0000 70%);
     background-repeat: no-repeat;
     overflow-x: hidden
 }
@@ -5401,12 +5401,12 @@ body:before {
 
 ::selection {
     color: #0b0c0e;
-    background-color: #fa0
+    background-color: #ff2d2d
 }
 
 :focus-visible {
     outline-offset: 2px;
-    outline: 2px solid #fa0
+    outline: 2px solid #ff2d2d
 }
 
 ::-webkit-scrollbar {
@@ -5546,7 +5546,7 @@ body:before {
     }
 
     50% {
-        box-shadow: 0 0 28px #ffaa0047
+        box-shadow: 0 0 28px #ff2d2d47
     }
 }
 
@@ -5633,8 +5633,8 @@ body:before {
 }
 
 .rank-edge-gold {
-    background-image: linear-gradient(90deg,#ffaa001f,#0000 45%);
-    box-shadow: inset 3px 0 #fa0
+    background-image: linear-gradient(90deg,#ff2d2d1f,#0000 45%);
+    box-shadow: inset 3px 0 #ff2d2d
 }
 
 .rank-edge-silver {
@@ -5658,8 +5658,8 @@ body:before {
 }
 
 .podium-block-gold {
-    background-image: linear-gradient(#ffaa0059,#ffaa0014);
-    border: 1px solid #ffaa0080;
+    background-image: linear-gradient(#ff2d2d59,#ff2d2d14);
+    border: 1px solid #ff2d2d80;
     border-top: none
 }
 
@@ -5709,7 +5709,7 @@ body:before {
 
 .skeleton {
     background-color: #1c1c22;
-    background-image: linear-gradient(100deg,#0000 30%,#ffaa001a 50%,#0000 70%);
+    background-image: linear-gradient(100deg,#0000 30%,#ff2d2d1a 50%,#0000 70%);
     background-size: 200% 100%;
     border-radius: 10px;
     animation: 1.6s linear infinite shimmer
@@ -5791,7 +5791,7 @@ body:before {
 
 .timeline:before {
     content: "";
-    background: linear-gradient(#ffaa0080,#2e2e38 40%,#0000);
+    background: linear-gradient(#ff2d2d80,#2e2e38 40%,#0000);
     border-radius: 2px;
     width: 2px;
     position: absolute;
@@ -6564,7 +6564,7 @@ body:before {
     white-space: nowrap
 }
 .doc-prose blockquote.callout {
-    --callout-color: #55e6e6;
+    --callout-color: #ff7a7a;
     border: 0;
     border-left: 4px solid var(--callout-color);
     background: color-mix(in srgb, var(--callout-color) 11%, transparent);
@@ -6577,7 +6577,7 @@ body:before {
 }
 
 .doc-prose blockquote.callout-warning {
-    --callout-color: #fa0
+    --callout-color: #ff2d2d
 }
 
 .doc-prose blockquote.callout-important {

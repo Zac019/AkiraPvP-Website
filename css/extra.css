@@ -1,4 +1,8 @@
-:root{--font-geist:"Bricolage Grotesque",system-ui,sans-serif;--font-geist-mono:"Geist Mono",ui-monospace,monospace;--link:#fa0;--warning:#fa0;--brand-soft:#ffaa0014;--brand-soft-foreground:#fa0;--focus:#fa0;--color-gold-hover:#ffbb33}
+:root{--font-geist:"Bricolage Grotesque",system-ui,sans-serif;--font-geist-mono:"Geist Mono",ui-monospace,monospace;--link:#ff2d2d;--warning:#ff2d2d;--brand-soft:#ff2d2d14;--brand-soft-foreground:#ff2d2d;--focus:#ff2d2d;--color-gold-hover:#ff5a5a}
 .field{height:44px;border-radius:12px;background:var(--surface-secondary);padding:0 14px;color:var(--foreground);outline:none;border:1px solid var(--border);width:100%}
-.field:focus{box-shadow:0 0 0 2px #fa0}
+.field:focus{box-shadow:0 0 0 2px #ff2d2d}
 [hidden]{display:none!important}
+.bg-gold,.bg-gold *{color:#fff!important}
+.hover\:bg-gold-hover:hover{background-color:#ff5a5a!important}
+body{background-image:radial-gradient(900px at 50% -10%,#ff2d2d1f,#0000 70%)!important}
+.staff-card img{image-rendering:pixelated}

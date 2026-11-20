@@ -3,7 +3,7 @@
   const $ = (s, r = document) => r.querySelector(s);
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const head = (uuid, size) => `https://minotar.net/helm/${uuid}/${size}.png`;
-  const nav = [["home", "index.html", "Inicio"], ["posts", "novedades.html", "Novedades"], ["tienda", "tienda.html", "Tienda", 1], ["ranking", "ranking.html", "Ranking"], ["pase", "pase.html", "Pase"], ["sanciones", "sanciones.html", "Sanciones"]];
+  const nav = [["home", "index.html", "Inicio"], ["posts", "novedades.html", "Novedades"], ["staff", "staff.html", "Staff"], ["ranking", "ranking.html", "Ranking"], ["sanciones", "sanciones.html", "Sanciones"]];
   const cls = (k, on, gold, mob) => on ? "bg-surface-secondary text-foreground shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]" : gold ? "text-gold hover:bg-surface-secondary" : "text-muted hover:bg-surface-secondary hover:text-foreground";
   const arrow = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
 
@@ -12,12 +12,12 @@
   <header class="sticky top-3 z-50 px-3 pt-3 sm:px-6">
     <div class="mx-auto flex h-14 w-full max-w-6xl items-center justify-between gap-3 glass rounded-full pr-2 pl-5">
       <a class="flex shrink-0 items-center gap-2.5 text-[17px] font-semibold tracking-tight text-foreground" href="index.html">
-        <img alt="" width="56" height="56" class="-my-2 size-14 object-contain drop-shadow-[0_4px_10px_rgba(0,0,0,0.6)]" src="img/logo.svg"/>${esc(S.domain)}
+        <img alt="" width="56" height="56" class="-my-2 size-14 object-contain drop-shadow-[0_4px_10px_rgba(0,0,0,0.6)]" src="img/logo.png"/>${esc(S.domain)}
       </a>
       <nav aria-label="Principal" class="no-scrollbar hidden min-w-0 items-center gap-1 overflow-x-auto text-sm font-medium md:flex">
         ${nav.map(n => `<a class="shrink-0 rounded-full px-3 py-2 transition-colors duration-150 ${cls(n[0], n[0] === page, n[3])}" href="${n[1]}">${n[2]}</a>`).join("")}
       </nav>
-      <a class="inline-flex h-10 items-center rounded-full px-4 text-sm font-semibold transition-colors duration-150 bg-gold text-[#0b0c0e] shadow-[inset_0_1px_0_rgba(255,255,255,0.5),0_8px_20px_-8px_rgba(255,170,0,0.55)] hover:bg-gold-hover" href="entrar.html">Entrar</a>
+      <a class="inline-flex h-10 items-center rounded-full px-4 text-sm font-semibold transition-colors duration-150 bg-gold text-[#0b0c0e] shadow-[inset_0_1px_0_rgba(255,255,255,0.5),0_8px_20px_-8px_rgba(255,45,45,0.55)] hover:bg-gold-hover" href="entrar.html">Entrar</a>
     </div>
   </header>
   <nav aria-label="Principal" class="glass fixed inset-x-3 bottom-3 z-50 flex items-center justify-between gap-1 rounded-full p-1.5 md:hidden">
@@ -42,7 +42,7 @@
   /* ---------- components ---------- */
   const copyBtn = () => `<button type="button" data-copy="${esc(S.ip)}" class="group flex h-[52px] cursor-pointer select-none items-center gap-3 rounded-[14px] border border-[#2E2E38] bg-[#121216] pr-2 pl-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_14px_28px_-16px_rgba(0,0,0,0.9)] transition-[border-color,transform] duration-150 hover:border-gold active:scale-[0.98]" aria-label="Copiar IP ${esc(S.ip)}">
     <span class="font-mono text-[15px] font-medium tracking-tight text-foreground">${esc(S.ip)}</span>
-    <span data-copy-label class="flex h-9 items-center gap-2 rounded-[9px] px-3.5 text-sm font-semibold bg-gold text-[#0b0c0e] shadow-[inset_0_1px_0_rgba(255,255,255,0.5),0_6px_16px_-6px_rgba(255,170,0,0.6)]">Copiar</span></button>`;
+    <span data-copy-label class="flex h-9 items-center gap-2 rounded-[9px] px-3.5 text-sm font-semibold bg-gold text-[#0b0c0e] shadow-[inset_0_1px_0_rgba(255,255,255,0.5),0_6px_16px_-6px_rgba(255,45,45,0.6)]">Copiar</span></button>`;
   const link = (href, t) => `<a class="inline-flex items-center gap-0.5 text-[15px] font-medium text-gold transition-colors duration-150 hover:text-gold-hover" href="${href}">${t} ${arrow}</a>`;
   const row = (i, p) => `<li><a class="flex items-center gap-4 border-t border-white/[0.07] py-3 transition-colors duration-150 hover:bg-white/[0.03]" href="#">
     <span class="num w-6 text-sm font-semibold ${i === 0 ? "text-gold" : "text-muted"}">${i + 1}</span>
@@ -64,11 +64,11 @@
           <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] py-1.5 pr-4 pl-3 text-sm backdrop-blur"><span class="size-2 rounded-full bg-ok shadow-[0_0_10px_#55E07A]"></span><span class="num font-mono font-medium" id="online">${S.online}</span><span class="text-muted">en línea ahora</span></span>
           <h1 class="text-balance text-[44px] leading-[0.98] min-[400px]:text-6xl font-semibold tracking-[-0.045em] sm:text-7xl lg:text-[76px] xl:text-[84px]">${esc(S.tagline[0])}<br/><span class="text-gold">${esc(S.tagline[1])}</span></h1>
           <p class="max-w-lg text-xl leading-relaxed text-muted">${esc(S.sub)}</p>
-          <div class="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-6">${copyBtn()}${link("tienda.html", "Ver la tienda")}</div>
+          <div class="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-6">${copyBtn()}${link("staff.html", "Conocer al staff")}</div>
         </div>
         <a class="group relative mx-auto w-full max-w-sm" href="ranking.html">
           <div aria-hidden="true" class="absolute inset-x-6 top-10 -z-10 h-full rounded-[32px] border border-white/10 bg-white/[0.03] [transform:perspective(900px)_rotateY(-14deg)_rotateX(6deg)_translateX(20px)]"></div>
-          <div class="bento flex flex-col items-center gap-5 p-8 text-center shadow-[-24px_36px_60px_-20px_rgba(0,0,0,0.9),0_0_80px_rgba(255,170,0,0.18)] [transform:perspective(900px)_rotateY(-14deg)_rotateX(6deg)] transition-transform duration-300 group-hover:[transform:perspective(900px)_rotateY(-6deg)_rotateX(3deg)_translateY(-4px)]">
+          <div class="bento flex flex-col items-center gap-5 p-8 text-center shadow-[-24px_36px_60px_-20px_rgba(0,0,0,0.9),0_0_80px_rgba(255,45,45,0.18)] [transform:perspective(900px)_rotateY(-14deg)_rotateX(6deg)] transition-transform duration-300 group-hover:[transform:perspective(900px)_rotateY(-6deg)_rotateX(3deg)_translateY(-4px)]">
             <span class="rounded-full bg-gold px-3 py-1 text-xs font-bold tracking-wide text-[#0b0c0e]">N.º 1 EN PRACTICE</span>
             <img alt="" width="112" height="112" class="rounded-2xl bg-surface-tertiary shadow-[0_18px_30px_-12px_rgba(0,0,0,0.9)]" src="${head(S.practice[0].uuid, 224)}"/>
             <div><p class="text-3xl font-semibold tracking-[-0.03em]">${esc(S.practice[0].name)}</p><p class="num mt-1 font-mono text-lg text-data">${S.practice[0].elo.toLocaleString("es")} <span class="text-muted">ELO</span></p></div>
@@ -84,11 +84,9 @@
 
     posts: () => title("Novedades", "Anuncios, parches y eventos de la red.") + `<div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3 pb-10">${S.posts.map(p => `<a href="#" class="bento flex flex-col gap-3 p-6" style="--post-accent:${p.accent}"><span class="post-accent-rule"></span><span class="post-tag w-fit rounded-full px-3 py-0.5 text-xs font-bold">${esc(p.tag)}</span><h2 class="text-xl font-semibold tracking-[-0.02em]">${esc(p.title)}</h2><p class="text-sm leading-relaxed text-muted">${esc(p.text)}</p><time class="mt-auto text-xs text-muted">${new Date(p.date).toLocaleDateString("es", { dateStyle: "long" })}</time></a>`).join("")}</div>`,
 
-    tienda: () => title("Tienda", "Apoya a la red y obtén ventajas cosméticas.") + `<div class="grid gap-4 md:grid-cols-3 pb-10">${S.store.map(p => `<section class="bento flex flex-col gap-4 p-8 ${p.hot ? "glow-gold" : ""}"><h2 class="text-2xl font-semibold tracking-[-0.03em]">${esc(p.name)} ${p.hot ? '<span class="ml-2 rounded-full bg-gold px-2 py-0.5 text-xs font-bold text-[#0b0c0e]">Popular</span>' : ""}</h2><p class="num font-mono text-3xl font-semibold text-gold">${esc(p.price)}</p><ul class="flex flex-col gap-2 text-sm text-muted">${p.perks.map(x => `<li>✓ ${esc(x)}</li>`).join("")}</ul><a href="#" class="mt-auto inline-flex h-11 items-center justify-center rounded-xl bg-gold px-5 text-sm font-semibold text-[#0b0c0e] hover:bg-gold-hover">Comprar</a></section>`).join("")}</div>`,
+    staff: () => title("Staff", "El equipo que mantiene la red segura y justa.") + `<div class="flex flex-col gap-5 pb-10">${S.staff.map(g => `<section class="bento flex flex-col gap-5 p-8" style="--c:${g.color}"><div class="flex items-center gap-3"><span class="size-3 rounded-full" style="background:${g.color};box-shadow:0 0 12px ${g.color}"></span><h2 class="text-2xl font-semibold tracking-[-0.03em]" style="color:${g.color}">${esc(g.rank)}</h2><span class="num font-mono text-sm text-muted">${g.members.length}</span></div><div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">${g.members.map(m => `<div class="staff-card flex items-center gap-4 rounded-2xl bg-black/25 p-4 ring-1 ring-white/[0.06] transition-transform duration-150 hover:-translate-y-0.5"><img alt="Skin de ${esc(m.name)}" loading="lazy" width="56" height="56" class="rounded-xl bg-surface-tertiary" src="https://minotar.net/helm/${encodeURIComponent(m.name)}/112.png"/><div class="min-w-0"><p class="truncate font-semibold">${esc(m.name)}</p><p class="truncate text-xs font-semibold" style="color:${g.color}">${esc(m.role)}</p></div></div>`).join("")}</div></section>`).join("")}</div>`,
 
     ranking: () => title("Ranking", "Clasificación de Practice y Kitmap.") + `<div class="grid grid-cols-1 gap-5 lg:grid-cols-2 pb-10"><section class="bento flex flex-col gap-4 p-8"><h2 class="text-[28px] font-semibold tracking-[-0.03em]">Practice</h2><ol>${S.practice.map((p, i) => row(i, p)).join("")}</ol></section><section class="bento flex flex-col gap-4 p-8"><h2 class="text-[28px] font-semibold tracking-[-0.03em]">Facciones Kitmap</h2><ol>${S.factions.map((p, i) => row(i, p)).join("")}</ol></section></div>`,
-
-    pase: () => title("Pase de batalla", "Sube de nivel jugando y desbloquea recompensas.") + `<div class="doc-table mb-10"><table><thead><tr><th>Nivel</th><th>Gratis</th><th>Premium</th></tr></thead><tbody>${S.pass.map(r => `<tr><td>${r.lvl}</td><td>${esc(r.free)}</td><td class="text-gold">${esc(r.premium)}</td></tr>`).join("")}</tbody></table></div>`,
 
     sanciones: () => title("Sanciones", "Historial público de bans y mutes.") + `<div class="doc-table mb-10"><table><thead><tr><th>Jugador</th><th>Tipo</th><th>Motivo</th><th>Staff</th><th>Fecha</th><th>Duración</th></tr></thead><tbody>${S.bans.map(b => `<tr><td>${esc(b.player)}</td><td>${esc(b.type)}</td><td>${esc(b.reason)}</td><td>${esc(b.staff)}</td><td>${esc(b.date)}</td><td>${esc(b.until)}</td></tr>`).join("")}</tbody></table></div>`,
 
