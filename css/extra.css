@@ -1,0 +1,4 @@
+:root{--font-geist:"Bricolage Grotesque",system-ui,sans-serif;--font-geist-mono:"Geist Mono",ui-monospace,monospace;--link:#fa0;--warning:#fa0;--brand-soft:#ffaa0014;--brand-soft-foreground:#fa0;--focus:#fa0;--color-gold-hover:#ffbb33}
+.field{height:44px;border-radius:12px;background:var(--surface-secondary);padding:0 14px;color:var(--foreground);outline:none;border:1px solid var(--border);width:100%}
+.field:focus{box-shadow:0 0 0 2px #fa0}
+[hidden]{display:none!important}
