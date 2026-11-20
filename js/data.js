@@ -16,7 +16,6 @@ window.SITE = {
   posts: [
     {slug:"apertura",title:"Gran apertura de la temporada",date:"2026-11-18",tag:"Anuncio",accent:"#fa0",text:"Abrimos Practice, Kitmap y HCF con nuevos kits y mapas."},
     {slug:"parche-1",title:"Parche 1.1: balance de kits",date:"2026-11-10",tag:"Parche",accent:"#55e6e6",text:"Ajustes de daño, cooldowns de perlas y correcciones."},
-    {slug:"torneo",title:"Torneo 1v1 con premios",date:"2026-11-02",tag:"Evento",accent:"#55e07a",text:"Inscríbete en Discord. Premios en rangos y cosméticos."}
   ],
   // Staff: agrupado por rango. Usa el nick real de Minecraft (se carga la skin sola).
   staff: [
