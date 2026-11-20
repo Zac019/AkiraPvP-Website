@@ -10,7 +10,7 @@ window.SITE = {
   practice: [
     {name:"19K2",uuid:"8a38dcf7-e83f-4565-9d24-9338989a827d",elo:1170},
     {name:"Barboza_Vlogs",uuid:"9f2b3a15-212e-4dca-b00f-ed5b0c01557d",elo:1120},
-    {name:"CallMeLucky_",uuid:"c919c3ae-b545-47b9-86b5-9c7c0c9243f5",elo:1050},
+    {name:"CallMeLucky_",uuid:"c919c3ae-b545-47b9-86b5-9c7c0c9243f5",elo:0},
   ],
   factions: [{name:"Alpha",pts:2551},{name:"Bravo",pts:838},{name:"Charlie",pts:274}],
   posts: [
