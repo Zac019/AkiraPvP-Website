@@ -8,11 +8,11 @@ window.SITE = {
     { label: "Kitmap y HCF", at: "2026-12-06T00:00:00-04:00", text: "domingo, 6 de diciembre, 00:00" }
   ],
   practice: [
-    {name:"19K2",uuid:"8a38dcf7-e83f-4565-9d24-9338989a827d",elo:1170},
-    {name:"Barboza_Vlogs",uuid:"9f2b3a15-212e-4dca-b00f-ed5b0c01557d",elo:1120},
+    {name:"19K2",uuid:"8a38dcf7-e83f-4565-9d24-9338989a827d",elo:10000},
+    {name:"Barboza_Vlogs",uuid:"9f2b3a15-212e-4dca-b00f-ed5b0c01557d",elo:0},
     {name:"CallMeLucky_",uuid:"c919c3ae-b545-47b9-86b5-9c7c0c9243f5",elo:0},
   ],
-  factions: [{name:"Alpha",pts:2551},{name:"Bravo",pts:838},{name:"Charlie",pts:274}],
+  factions: [{name:"Alpha",pts:300},{name:"Bravo",pts:200},{name:"Charlie",pts:100}],
   posts: [
     {slug:"apertura",title:"Gran apertura de la temporada",date:"2026-11-18",tag:"Anuncio",accent:"#fa0",text:"Abrimos Practice, Kitmap y HCF con nuevos kits y mapas."},
     {slug:"parche-1",title:"Parche 1.1: balance de kits",date:"2026-11-10",tag:"Parche",accent:"#55e6e6",text:"Ajustes de daño, cooldowns de perlas y correcciones."},
