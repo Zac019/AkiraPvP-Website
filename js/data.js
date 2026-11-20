@@ -4,7 +4,7 @@ window.SITE = {
   tagline: ["PvP competitivo.", "En español."], sub: "Practice, Kitmap y HCF.",
   online: 5,
   openings: [
-    { label: "Practice", at: "2026-12-05T00:00:00-04:00", text: "sábado, 5 de diciembre, 00:00" },
+    { label: "Practice", at: "2026-11-20T00:00:00-04:00", text: "Viernes, 20 de noviembre, 00:00" },
     { label: "Kitmap y HCF", at: "2026-12-06T00:00:00-04:00", text: "domingo, 6 de diciembre, 00:00" }
   ],
   practice: [
