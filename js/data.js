@@ -28,7 +28,7 @@ window.SITE = {
     {rank:"Trial-Mod",color:"#f1c40f",members:[{name:"Helper1",role:"Trial-Mod"},{name:"Helper2",role:"Trial-Mod"}]}
   ],
   bans: [
-    {player:"Cheater1",type:"Ban",reason:"Hacks (KillAura)",staff:"Staff1",date:"2026-11-19",until:"Permanente"},
+    {player:"CallMeLucky_",type:"Ban",reason:"Hacks (KillAura)",staff:"19K2",date:"2026-11-19",until:"Permanente"},
     {player:"Toxico2",type:"Mute",reason:"Insultos",staff:"Staff2",date:"2026-11-18",until:"7 días"},
     {player:"Bug3",type:"Ban",reason:"Abuso de bugs",staff:"Staff1",date:"2026-11-16",until:"30 días"}
   ]
