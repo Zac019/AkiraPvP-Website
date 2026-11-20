@@ -2,10 +2,10 @@
 window.SITE = {
   name: "AkiraPvP", domain: "akirapvp.lat", ip: "akirapvp.lat", discord: "https://discord.gg/tu-invite",
   tagline: ["PvP competitivo.", "En español."], sub: "Practice, Kitmap y HCF.",
-  online: 5,
+  online: 100,
   openings: [
     { label: "Practice", at: "2026-12-05T00:00:00-04:00", text: "sábado, 5 de diciembre, 00:00" },
-    { label: "Kitmap y Meetup", at: "2026-12-06T00:00:00-04:00", text: "domingo, 6 de diciembre, 00:00" }
+    { label: "Kitmap y HCF", at: "2026-12-06T00:00:00-04:00", text: "domingo, 6 de diciembre, 00:00" }
   ],
   practice: [
     {name:"Jugador1",uuid:"ecc38f74-8562-4598-bbac-677fb26c5389",elo:1170},
@@ -17,8 +17,8 @@ window.SITE = {
   factions: [{name:"Alpha",pts:2551},{name:"Bravo",pts:838},{name:"Charlie",pts:274}],
   posts: [
     {slug:"apertura",title:"Gran apertura de la temporada",date:"2026-11-18",tag:"Anuncio",accent:"#fa0",text:"Abrimos Practice, Kitmap y Meetup con nuevos kits y mapas."},
-    {slug:"parche-1",title:"Parche 1.1: balance de kits",date:"2026-11-10",tag:"Parche",accent:"#55e6e6",text:"Ajustes de daño, cooldowns de perlas y correcciones."},
-    {slug:"torneo",title:"Torneo 1v1 con premios",date:"2026-11-02",tag:"Evento",accent:"#55e07a",text:"Inscríbete en Discord. Premios en rangos y pase."}
+    {slug:"parche-1",title:"Parche 1.1: balance de kits",date:"2026-11-10",tag:"Parche",accent:"#e65555",text:"Ajustes de daño, cooldowns de perlas y correcciones."},
+  
   ],
   store: [
     {name:"VIP",price:"4,99 US$",perks:["Prefijo VIP","Kit diario","Cola prioritaria"]},
