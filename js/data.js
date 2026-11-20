@@ -8,11 +8,9 @@ window.SITE = {
     { label: "Kitmap y Meetup", at: "2026-12-06T00:00:00-04:00", text: "domingo, 6 de diciembre, 00:00" }
   ],
   practice: [
-    {name:"Jugador1",uuid:"ecc38f74-8562-4598-bbac-677fb26c5389",elo:1170},
-    {name:"Jugador2",uuid:"52a43a0c-3f93-4dd7-8408-efb0bbdb690c",elo:1124},
-    {name:"Jugador3",uuid:"c69b4291-4fd3-4bf1-bdaa-98aa797ae2cb",elo:1108},
-    {name:"Jugador4",uuid:"adb0b6be-9c0f-489c-a263-37bf353e3424",elo:1082},
-    {name:"Jugador5",uuid:"c36b1002-d0ab-45e0-a064-bcc4c6765e49",elo:1076}
+    {name:"19K2",uuid:"8a38dcf7-e83f-4565-9d24-9338989a827d",elo:1170},
+    {name:"Barboza_Vlogs",uuid:"d3f1e2c4-5b6a-4c7e-9f8a-1b2c3d4e5f6g",elo:1120},
+    {name:"CallMeLucky_",uuid:"1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",elo:1050},
   ],
   factions: [{name:"Alpha",pts:2551},{name:"Bravo",pts:838},{name:"Charlie",pts:274}],
   posts: [
