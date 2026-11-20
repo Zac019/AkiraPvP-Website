@@ -15,7 +15,7 @@ window.SITE = {
   ],
   factions: [{name:"Alpha",pts:300},{name:"Bravo",pts:200},{name:"Charlie",pts:100}],
   posts: [
-    {slug:"apertura",title:"Gran apertura de la temporada",date:"2026-11-18",tag:"Anuncio",accent:"rgb(255, 0, 0)",text:"Abrimos Practice, Mapas Nuevos"},
+    {slug:"apertura",title:"Gran apertura de la temporada 1 de Practice",date:"2026-11-18",tag:"Anuncio",accent:"rgb(255, 0, 0)",text:"Abrimos Practice, Mapas Nuevos"},
     {slug:"parche-1",title:"Parche 1.1: balance de kits",date:"2026-11-10",tag:"Parche",accent:"#0084ff",text:"Ajustes de daño, cooldowns de perlas y correcciones."},
   ],
   // Staff: agrupado por rango. Usa el nick real de Minecraft (se carga la skin sola).
