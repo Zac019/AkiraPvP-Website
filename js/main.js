@@ -17,7 +17,7 @@
       <nav aria-label="Principal" class="no-scrollbar hidden min-w-0 items-center gap-1 overflow-x-auto text-sm font-medium md:flex">
         ${nav.map(n => `<a class="shrink-0 rounded-full px-3 py-2 transition-colors duration-150 ${cls(n[0], n[0] === page, n[3])}" href="${n[1]}">${n[2]}</a>`).join("")}
       </nav>
-      <a class="inline-flex h-10 items-center rounded-full px-4 text-sm font-semibold transition-colors duration-150 bg-gold text-[#0b0c0e] shadow-[inset_0_1px_0_rgba(255,255,255,0.5),0_8px_20px_-8px_rgba(255,170,0,0.55)] hover:bg-gold-hover" href="entrar.html">Entrar</a>
+      <a class="inline-flex h-10 items-center rounded-full px-4 text-sm font-semibold transition-colors duration-150 bg-red text-[#0b0c0e] shadow-[inset_0_1px_0_rgba(255,255,255,0.5),0_8px_20px_-8px_rgba(255,170,0,0.55)] hover:bg-red-hover" href="entrar.html">Entrar</a>
     </div>
   </header>
   <nav aria-label="Principal" class="glass fixed inset-x-3 bottom-3 z-50 flex items-center justify-between gap-1 rounded-full p-1.5 md:hidden">
@@ -27,7 +27,7 @@
   <footer class="relative z-10 border-t border-[#2E2E38] bg-[#0b0c0e] py-10">
     <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 sm:px-7 md:flex-row">
       <div class="flex flex-col items-center gap-2 text-center md:items-start md:text-left">
-        <span class="flex items-center gap-2.5 text-base font-semibold tracking-tight text-foreground"><span class="size-2 rounded-full bg-gold"></span>${esc(S.domain)}</span>
+        <span class="flex items-center gap-2.5 text-base font-semibold tracking-tight text-foreground"><span class="size-2 rounded-full bg-red"></span>${esc(S.domain)}</span>
         <span class="max-w-md text-xs leading-relaxed text-muted">Red competitiva de Minecraft. No afiliado con Mojang ni Microsoft.</span>
       </div>
       <nav class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-muted">
@@ -40,12 +40,12 @@
     <span class="hidden pr-1 md:inline">Discord</span></a>`;
 
   /* ---------- components ---------- */
-  const copyBtn = () => `<button type="button" data-copy="${esc(S.ip)}" class="group flex h-[52px] cursor-pointer select-none items-center gap-3 rounded-[14px] border border-[#2E2E38] bg-[#121216] pr-2 pl-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_14px_28px_-16px_rgba(0,0,0,0.9)] transition-[border-color,transform] duration-150 hover:border-gold active:scale-[0.98]" aria-label="Copiar IP ${esc(S.ip)}">
+  const copyBtn = () => `<button type="button" data-copy="${esc(S.ip)}" class="group flex h-[52px] cursor-pointer select-none items-center gap-3 rounded-[14px] border border-[#2E2E38] bg-[#121216] pr-2 pl-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_14px_28px_-16px_rgba(0,0,0,0.9)] transition-[border-color,transform] duration-150 hover:border-red active:scale-[0.98]" aria-label="Copiar IP ${esc(S.ip)}">
     <span class="font-mono text-[15px] font-medium tracking-tight text-foreground">${esc(S.ip)}</span>
-    <span data-copy-label class="flex h-9 items-center gap-2 rounded-[9px] px-3.5 text-sm font-semibold bg-gold text-[#0b0c0e] shadow-[inset_0_1px_0_rgba(255,255,255,0.5),0_6px_16px_-6px_rgba(255,170,0,0.6)]">Copiar</span></button>`;
-  const link = (href, t) => `<a class="inline-flex items-center gap-0.5 text-[15px] font-medium text-gold transition-colors duration-150 hover:text-gold-hover" href="${href}">${t} ${arrow}</a>`;
+    <span data-copy-label class="flex h-9 items-center gap-2 rounded-[9px] px-3.5 text-sm font-semibold bg-red text-[#0b0c0e] shadow-[inset_0_1px_0_rgba(255,255,255,0.5),0_6px_16px_-6px_rgba(255,170,0,0.6)]">Copiar</span></button>`;
+  const link = (href, t) => `<a class="inline-flex items-center gap-0.5 text-[15px] font-medium text-red transition-colors duration-150 hover:text-red-hover" href="${href}">${t} ${arrow}</a>`;
   const row = (i, p) => `<li><a class="flex items-center gap-4 border-t border-white/[0.07] py-3 transition-colors duration-150 hover:bg-white/[0.03]" href="#">
-    <span class="num w-6 text-sm font-semibold ${i === 0 ? "text-gold" : "text-muted"}">${i + 1}</span>
+    <span class="num w-6 text-sm font-semibold ${i === 0 ? "text-red" : "text-muted"}">${i + 1}</span>
     ${p.uuid ? `<img alt="Skin de ${esc(p.name)}" loading="lazy" width="28" height="28" class="rounded-lg bg-surface-tertiary" src="${head(p.uuid, 56)}"/>` : ""}
     <span class="min-w-0 flex-1 truncate font-medium">${esc(p.name)}</span>
     <span class="num font-mono text-sm text-data">${(p.elo ?? p.pts).toLocaleString("es")}</span></a></li>`;
@@ -59,17 +59,17 @@
   const pages = {
     home: () => `<div class="flex flex-col gap-5 pb-10">
       <section class="relative grid items-center gap-10 overflow-x-clip pt-14 pb-6 lg:grid-cols-[1.15fr_0.85fr] lg:pt-20">
-        <div aria-hidden="true" class="pointer-events-none absolute -top-24 right-0 -z-10 size-[520px] rounded-full bg-gold/15 blur-[120px]"></div>
+        <div aria-hidden="true" class="pointer-events-none absolute -top-24 right-0 -z-10 size-[520px] rounded-full bg-red/15 blur-[120px]"></div>
         <div class="flex min-w-0 flex-col items-start gap-6">
           <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] py-1.5 pr-4 pl-3 text-sm backdrop-blur"><span class="size-2 rounded-full bg-ok shadow-[0_0_10px_#55E07A]"></span><span class="num font-mono font-medium" id="online">${S.online}</span><span class="text-muted">en línea ahora</span></span>
-          <h1 class="text-balance text-[44px] leading-[0.98] min-[400px]:text-6xl font-semibold tracking-[-0.045em] sm:text-7xl lg:text-[76px] xl:text-[84px]">${esc(S.tagline[0])}<br/><span class="text-gold">${esc(S.tagline[1])}</span></h1>
+          <h1 class="text-balance text-[44px] leading-[0.98] min-[400px]:text-6xl font-semibold tracking-[-0.045em] sm:text-7xl lg:text-[76px] xl:text-[84px]">${esc(S.tagline[0])}<br/><span class="text-red">${esc(S.tagline[1])}</span></h1>
           <p class="max-w-lg text-xl leading-relaxed text-muted">${esc(S.sub)}</p>
           <div class="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-6">${copyBtn()}${link("tienda.html", "Ver la tienda")}</div>
         </div>
         <a class="group relative mx-auto w-full max-w-sm" href="ranking.html">
           <div aria-hidden="true" class="absolute inset-x-6 top-10 -z-10 h-full rounded-[32px] border border-white/10 bg-white/[0.03] [transform:perspective(900px)_rotateY(-14deg)_rotateX(6deg)_translateX(20px)]"></div>
           <div class="bento flex flex-col items-center gap-5 p-8 text-center shadow-[-24px_36px_60px_-20px_rgba(0,0,0,0.9),0_0_80px_rgba(255,170,0,0.18)] [transform:perspective(900px)_rotateY(-14deg)_rotateX(6deg)] transition-transform duration-300 group-hover:[transform:perspective(900px)_rotateY(-6deg)_rotateX(3deg)_translateY(-4px)]">
-            <span class="rounded-full bg-gold px-3 py-1 text-xs font-bold tracking-wide text-[#0b0c0e]">N.º 1 EN PRACTICE</span>
+            <span class="rounded-full bg-red px-3 py-1 text-xs font-bold tracking-wide text-[#0b0c0e]">N.º 1 EN PRACTICE</span>
             <img alt="" width="112" height="112" class="rounded-2xl bg-surface-tertiary shadow-[0_18px_30px_-12px_rgba(0,0,0,0.9)]" src="${head(S.practice[0].uuid, 224)}"/>
             <div><p class="text-3xl font-semibold tracking-[-0.03em]">${esc(S.practice[0].name)}</p><p class="num mt-1 font-mono text-lg text-data">${S.practice[0].elo.toLocaleString("es")} <span class="text-muted">ELO</span></p></div>
           </div></a>
@@ -84,11 +84,11 @@
 
     posts: () => title("Novedades", "Anuncios, parches y eventos de la red.") + `<div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3 pb-10">${S.posts.map(p => `<a href="#" class="bento flex flex-col gap-3 p-6" style="--post-accent:${p.accent}"><span class="post-accent-rule"></span><span class="post-tag w-fit rounded-full px-3 py-0.5 text-xs font-bold">${esc(p.tag)}</span><h2 class="text-xl font-semibold tracking-[-0.02em]">${esc(p.title)}</h2><p class="text-sm leading-relaxed text-muted">${esc(p.text)}</p><time class="mt-auto text-xs text-muted">${new Date(p.date).toLocaleDateString("es", { dateStyle: "long" })}</time></a>`).join("")}</div>`,
 
-    tienda: () => title("Tienda", "Apoya a la red y obtén ventajas cosméticas.") + `<div class="grid gap-4 md:grid-cols-3 pb-10">${S.store.map(p => `<section class="bento flex flex-col gap-4 p-8 ${p.hot ? "glow-gold" : ""}"><h2 class="text-2xl font-semibold tracking-[-0.03em]">${esc(p.name)} ${p.hot ? '<span class="ml-2 rounded-full bg-gold px-2 py-0.5 text-xs font-bold text-[#0b0c0e]">Popular</span>' : ""}</h2><p class="num font-mono text-3xl font-semibold text-gold">${esc(p.price)}</p><ul class="flex flex-col gap-2 text-sm text-muted">${p.perks.map(x => `<li>✓ ${esc(x)}</li>`).join("")}</ul><a href="#" class="mt-auto inline-flex h-11 items-center justify-center rounded-xl bg-gold px-5 text-sm font-semibold text-[#0b0c0e] hover:bg-gold-hover">Comprar</a></section>`).join("")}</div>`,
+    tienda: () => title("Tienda", "Apoya a la red y obtén ventajas cosméticas.") + `<div class="grid gap-4 md:grid-cols-3 pb-10">${S.store.map(p => `<section class="bento flex flex-col gap-4 p-8 ${p.hot ? "glow-red" : ""}"><h2 class="text-2xl font-semibold tracking-[-0.03em]">${esc(p.name)} ${p.hot ? '<span class="ml-2 rounded-full bg-red px-2 py-0.5 text-xs font-bold text-[#0b0c0e]">Popular</span>' : ""}</h2><p class="num font-mono text-3xl font-semibold text-red">${esc(p.price)}</p><ul class="flex flex-col gap-2 text-sm text-muted">${p.perks.map(x => `<li>✓ ${esc(x)}</li>`).join("")}</ul><a href="#" class="mt-auto inline-flex h-11 items-center justify-center rounded-xl bg-red px-5 text-sm font-semibold text-[#0b0c0e] hover:bg-red-hover">Comprar</a></section>`).join("")}</div>`,
 
     ranking: () => title("Ranking", "Clasificación de Practice y Kitmap.") + `<div class="grid grid-cols-1 gap-5 lg:grid-cols-2 pb-10"><section class="bento flex flex-col gap-4 p-8"><h2 class="text-[28px] font-semibold tracking-[-0.03em]">Practice</h2><ol>${S.practice.map((p, i) => row(i, p)).join("")}</ol></section><section class="bento flex flex-col gap-4 p-8"><h2 class="text-[28px] font-semibold tracking-[-0.03em]">Facciones Kitmap</h2><ol>${S.factions.map((p, i) => row(i, p)).join("")}</ol></section></div>`,
 
-    pase: () => title("Pase de batalla", "Sube de nivel jugando y desbloquea recompensas.") + `<div class="doc-table mb-10"><table><thead><tr><th>Nivel</th><th>Gratis</th><th>Premium</th></tr></thead><tbody>${S.pass.map(r => `<tr><td>${r.lvl}</td><td>${esc(r.free)}</td><td class="text-gold">${esc(r.premium)}</td></tr>`).join("")}</tbody></table></div>`,
+    pase: () => title("Pase de batalla", "Sube de nivel jugando y desbloquea recompensas.") + `<div class="doc-table mb-10"><table><thead><tr><th>Nivel</th><th>Gratis</th><th>Premium</th></tr></thead><tbody>${S.pass.map(r => `<tr><td>${r.lvl}</td><td>${esc(r.free)}</td><td class="text-red">${esc(r.premium)}</td></tr>`).join("")}</tbody></table></div>`,
 
     sanciones: () => title("Sanciones", "Historial público de bans y mutes.") + `<div class="doc-table mb-10"><table><thead><tr><th>Jugador</th><th>Tipo</th><th>Motivo</th><th>Staff</th><th>Fecha</th><th>Duración</th></tr></thead><tbody>${S.bans.map(b => `<tr><td>${esc(b.player)}</td><td>${esc(b.type)}</td><td>${esc(b.reason)}</td><td>${esc(b.staff)}</td><td>${esc(b.date)}</td><td>${esc(b.until)}</td></tr>`).join("")}</tbody></table></div>`,
 
@@ -96,9 +96,9 @@
       <form id="login" class="flex flex-col gap-4"><label class="flex flex-col gap-1.5 text-sm font-bold">Nombre de Minecraft<input name="name" required maxlength="16" autocomplete="username" class="field text-base font-normal"/></label>
       <label class="flex flex-col gap-1.5 text-sm font-bold">Código de <span class="font-mono">/web</span><input name="code" required maxlength="9" placeholder="XXXX-XXXX" autocomplete="one-time-code" class="field font-mono text-base tracking-widest uppercase"/></label>
       <p id="err" role="alert" hidden class="rounded-xl bg-danger/10 px-3.5 py-2.5 text-sm font-semibold text-danger"></p>
-      <button type="submit" class="h-[52px] rounded-[14px] bg-gold px-7 text-[15px] font-semibold text-[#0b0c0e] hover:bg-gold-hover">Entrar</button></form></div></div>`,
+      <button type="submit" class="h-[52px] rounded-[14px] bg-red px-7 text-[15px] font-semibold text-[#0b0c0e] hover:bg-red-hover">Entrar</button></form></div></div>`,
 
-    cuenta: () => { const u = JSON.parse(sessionStorage.getItem("user") || "null"); return u ? title("Tu cuenta", "") + `<section class="bento flex items-center gap-5 p-8 mb-10"><img class="rounded-2xl" width="80" height="80" alt="" src="https://minotar.net/helm/${esc(u.name)}/160.png"/><div><p class="text-2xl font-semibold">${esc(u.name)}</p><button id="out" class="mt-2 text-sm text-gold">Cerrar sesión</button></div></section>` : `<p class="pt-16 text-muted">No has iniciado sesión. <a class="text-gold" href="entrar.html">Entrar</a></p>`; }
+    cuenta: () => { const u = JSON.parse(sessionStorage.getItem("user") || "null"); return u ? title("Tu cuenta", "") + `<section class="bento flex items-center gap-5 p-8 mb-10"><img class="rounded-2xl" width="80" height="80" alt="" src="https://minotar.net/helm/${esc(u.name)}/160.png"/><div><p class="text-2xl font-semibold">${esc(u.name)}</p><button id="out" class="mt-2 text-sm text-red">Cerrar sesión</button></div></section>` : `<p class="pt-16 text-muted">No has iniciado sesión. <a class="text-red" href="entrar.html">Entrar</a></p>`; }
   };
 
   /* ---------- mount ---------- */
