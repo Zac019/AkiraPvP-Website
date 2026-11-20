@@ -4,7 +4,7 @@
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const head = (uuid, size) => `https://minotar.net/helm/${uuid}/${size}.png`;
   const nav = [["home", "index.html", "Inicio"], ["posts", "novedades.html", "Novedades"], ["tienda", "tienda.html", "Tienda", 1], ["ranking", "ranking.html", "Ranking"], ["pase", "pase.html", "Pase"], ["sanciones", "sanciones.html", "Sanciones"]];
-  const cls = (k, on, gold, mob) => on ? "bg-surface-secondary text-foreground shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]" : gold ? "text-gold hover:bg-surface-secondary" : "text-muted hover:bg-surface-secondary hover:text-foreground";
+  const cls = (k, on, red, mob) => on ? "bg-surface-secondary text-foreground shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]" : red ? "text-red hover:bg-surface-secondary" : "text-muted hover:bg-surface-secondary hover:text-foreground";
   const arrow = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
 
   /* ---------- shell ---------- */
