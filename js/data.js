@@ -1,7 +1,7 @@
 // Edita aquí los datos del sitio (luego puedes conectarlo a una API/DB)
 window.SITE = {
-  name: "TuRed", domain: "tured.net", ip: "play.tured.net", discord: "https://discord.gg/tu-invite",
-  tagline: ["PvP competitivo.", "En español."], sub: "Practice, Kitmap y Meetup.",
+  name: "AkiraPvP", domain: "akirapvp.lat", ip: "akirapvp.lat", discord: "https://discord.gg/tu-invite",
+  tagline: ["PvP competitivo.", "En español."], sub: "Practice, Kitmap y HCF.",
   online: 5,
   openings: [
     { label: "Practice", at: "2026-12-05T00:00:00-04:00", text: "sábado, 5 de diciembre, 00:00" },
