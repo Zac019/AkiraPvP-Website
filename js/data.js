@@ -1,6 +1,6 @@
 // Edita aquí los datos del sitio (luego puedes conectarlo a una API/DB)
 window.SITE = {
-  name: "AkiraPvP", domain: "akirapvp.lat", ip: "akirapvp.lat", discord: "https://discord.gg/tu-invite",
+  name: "AkiraPvP", domain: "akirapvp.lat", ip: "akirapvp.lat", discord: "https://discord.gg/pq58cYQA",
   tagline: ["PvP competitivo.", "En español."], sub: "Practice, Kitmap y HCF.",
   online: 500,
   openings: [
