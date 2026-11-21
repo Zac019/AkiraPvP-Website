@@ -23,9 +23,14 @@ window.SITE = {
     {rank:"Owner",color:"#ff2d2d",members:[{name:"19K2",role:"Owner"},{name:"Barboza_Vlogs",role:"Owner"}]},
     {rank:"Co-Owner",color:"#bb4444",members:[{name:"CallMeLucky_",role:"Co-Owner"}]},
     {rank:"Manager",color:"#800000",members:[{name:"SoyUnRex0",role:"Manager"}]},
-    {rank:"Admin",color:"#ff5555",members:[{name:"ItzProfia",role:"Admin"}]},
+    {rank:"Coordinator",color:"#ff5555",members:[{name:"User",role:"Coordinator"}]},
     {rank:"Developer",color:"#26a69a",members:[{name:"Dev1",role:"Desarrollador"}]},
-    {rank:"Mod",color:"#206694",members:[{name:"Mod1",role:"Moderador"},{name:"Mod2",role:"Moderador"},{name:"Mod3",role:"Moderador"}]},
+    {rank:"Platform-Admin",color:"#ff5555",members:[{name:"zKolah",role:"Platform-Admin"}]},
+    {rank:"SrAdmin",color:"#800000",members:[{name:"User",role:"SrAdmin"}]},
+    {rank:"Admin",color:"#ff5555",members:[{name:"ItzProfia",role:"Admin"}]},
+    {rank:"SrMod",color:"#00aa00",members:[{name:"User",role:"SrMod"}]},
+    {rank:"Mod+",color:"#206694",members:[{name:"User",role:"Mod+"}]},
+    {rank:"Mod",color:"#206694",members:[{name:"Mod1",role:"Mod"},{name:"Mod2",role:"Mod"},{name:"Mod3",role:"Mod"}]},
     {rank:"Trial-Mod",color:"#f1c40f",members:[{name:"Helper1",role:"Trial-Mod"},{name:"Helper2",role:"Trial-Mod"}]}
   ],
   bans: [
