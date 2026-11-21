@@ -29,7 +29,7 @@ window.SITE = {
     {rank:"SrAdmin",color:"#800000",members:[{name:"none",role:"SrAdmin"}]},
     {rank:"Admin",color:"#ff5555",members:[{name:"ItzProfia",role:"Admin"}]},
     {rank:"SrMod",color:"#00aa00",members:[{name:"none",role:"SrMod"}]},
-    {rank:"Mod+",color:"#206694",members:[{name:"7Maxxi_",role:"Mod+" + "SS-Coordinator"}]},
+    {rank:"Mod+",color:"#206694",members:[{name:"7Maxxi_",role:"Mod+ = SS-Coordinator"}]},
     {rank:"Mod",color:"#206694",members:[{name:"Oriyn",role:"Mod"}]},
     {rank:"Trial-Mod",color:"#f1c40f",members:[{name:"MiguelRD0880",role:"Trial-Mod"}]}
   ],
