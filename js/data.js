@@ -24,14 +24,14 @@ window.SITE = {
     {rank:"Co-Owner",color:"#bb4444",members:[{name:"CallMeLucky_",role:"Co-Owner"}]},
     {rank:"Manager",color:"#800000",members:[{name:"SoyUnRex0",role:"Manager"},{name:"Tusead0h",role:"Manager"}]},
     {rank:"Coordinator",color:"#ff5555",members:[{name:"User",role:"Coordinator"}]},
-    {rank:"Developer",color:"#26a69a",members:[{name:"noriiih",role:"Developer"},{name:"greze",role:"Developer"},{name:"zdping",role:"Developer"}]},
+    {rank:"Developer",color:"#26a69a",members:[{name:"Noriiih",role:"Developer"},{name:"Greze",role:"Developer"},{name:"zdping",role:"Developer"}]},
     {rank:"Platform-Admin",color:"#ff5555",members:[{name:"zKolah",role:"Platform-Admin"}]},
     {rank:"SrAdmin",color:"#800000",members:[{name:"User",role:"SrAdmin"}]},
     {rank:"Admin",color:"#ff5555",members:[{name:"ItzProfia",role:"Admin"}]},
     {rank:"SrMod",color:"#00aa00",members:[{name:"User",role:"SrMod"}]},
     {rank:"Mod+",color:"#206694",members:[{name:"User",role:"Mod+"}]},
-    {rank:"Mod",color:"#206694",members:[{name:"oriyn",role:"Mod"},{name:"Mod2",role:"Mod"},{name:"Mod3",role:"Mod"}]},
-    {rank:"Trial-Mod",color:"#f1c40f",members:[{name:"MiguelRD0880",role:"Trial-Mod"},{name:"Helper2",role:"Trial-Mod"}]}
+    {rank:"Mod",color:"#206694",members:[{name:"Oriyn",role:"Mod"}]},
+    {rank:"Trial-Mod",color:"#f1c40f",members:[{name:"MiguelRD0880",role:"Trial-Mod"}]}
   ],
   bans: [
     {player:"CallMeLucky_",type:"Ban",reason:"Hacks (KillAura)",staff:"19K2",date:"2026-11-19",until:"Permanente"},
