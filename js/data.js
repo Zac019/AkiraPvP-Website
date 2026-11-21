@@ -22,7 +22,7 @@ window.SITE = {
   staff: [
     {rank:"Owner",color:"#ff2d2d",members:[{name:"19K2",role:"Owner"},{name:"Barboza_Vlogs",role:"Owner"}]},
     {rank:"Co-Owner",color:"#bb4444",members:[{name:"CallMeLucky_",role:"Co-Owner"}]},
-    {rank:"Manager",color:"#800000",members:[{name:"SoyUnRex0",role:"Manager"},{name:"Tusead0h",role:"Manager"}]},
+    {rank:"Manager",color:"#800000",members:[{name:"SoyUnRex0",role:"Manager"},{name:"Tusead0h",role:"SS-Manager"}]},
     {rank:"Coordinator",color:"#ff5555",members:[{name:"User",role:"Coordinator"}]},
     {rank:"Developer",color:"#26a69a",members:[{name:"Noriiih",role:"Developer"},{name:"Greze",role:"Developer"},{name:"zdping",role:"Developer"}]},
     {rank:"Platform-Admin",color:"#ff5555",members:[{name:"zKolah",role:"Platform-Admin"}]},
