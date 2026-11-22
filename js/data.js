@@ -15,11 +15,6 @@ window.SITE = {
   ],
   // Staff por rango: usa el nick real de Minecraft (la skin se carga sola)
   staff: [
-    {rank:"Owner",color:"#ff2d2d",members:[{name:"Owner1",role:"Fundador"},{name:"Owner2",role:"Co-Fundador"}]},
-    {rank:"Admin",color:"#ff7a2d",members:[{name:"Admin1",role:"Administrador"},{name:"Admin2",role:"Administrador"}]},
-    {rank:"Developer",color:"#55e07a",members:[{name:"Dev1",role:"Desarrollador"}]},
-    {rank:"Moderador",color:"#4d9bff",members:[{name:"Mod1",role:"Moderador"},{name:"Mod2",role:"Moderador"},{name:"Mod3",role:"Moderador"}]},
-    {rank:"Helper",color:"#c77dff",members:[{name:"Helper1",role:"Ayudante"},{name:"Helper2",role:"Ayudante"}]},
     {rank:"Owner",color:"#ff2d2d",members:[{name:"19K2",role:"Owner"},{name:"Barboza_Vlogs",role:"Owner"}]},
     {rank:"Co-Owner",color:"#bb4444",members:[{name:"CallMeLucky_",role:"Co-Owner"}]},
     {rank:"Manager",color:"#800000",members:[{name:"SoyUnRex0",role:"Manager"},{name:"Tusead0h",role:"SS-Manager"}]},
