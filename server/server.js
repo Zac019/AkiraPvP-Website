@@ -31,6 +31,8 @@ const cfg = {
 if (!E.SESSION_SECRET) console.warn('[aviso] SESSION_SECRET no definido: las sesiones se cerrarán al reiniciar.');
 if (!cfg.pluginSecret) console.warn('[aviso] PLUGIN_SECRET no definido: el plugin /web NO podrá registrar códigos.');
 const Q = require('./queries');
+const SRC = require('./sources');
+const mongoSrc = require('./mongoSource');
 const PUBLIC = path.join(__dirname, '..', 'public');
 
 // ---------- almacenamiento: MySQL o archivo ----------
@@ -44,6 +46,10 @@ if (E.DB_HOST) {
     });
   } catch (e) { console.error('[error] DB_HOST definido pero falta mysql2: ejecuta "npm install" en /server'); }
 }
+// Mongo como almacén de novedades/códigos (si no hay MySQL)
+const WEB_URI = E.WEB_MONGO_URI || E.MONGO_URI || '';
+let mdb = null;
+const getM = async () => (await mongoSrc.client(WEB_URI)).db(E.WEB_MONGO_DB || 'akirapvp_web');
 const FILE = path.join(__dirname, 'data', 'store.json');
 let fileDb = { codes: {}, posts: [], nextId: 1 };
 try { fileDb = Object.assign(fileDb, JSON.parse(fs.readFileSync(FILE, 'utf8'))); } catch (e) { /* nuevo */ }
@@ -51,15 +57,17 @@ const saveFile = () => { try { fs.mkdirSync(path.dirname(FILE), { recursive: tru
 
 const store = {
   async init() {
+    if (!pool && WEB_URI) { try { mdb = await getM(); await mdb.collection('web_posts').createIndex({ created: -1 }); } catch (e) { console.error('[error] MongoDB (web):', e.message); mdb = null; } }
     if (!pool) return;
     await pool.query('CREATE TABLE IF NOT EXISTS web_codes (name_lc VARCHAR(16) PRIMARY KEY, name VARCHAR(16), uuid VARCHAR(36), code VARCHAR(9), staff TINYINT(1), expires BIGINT)');
     await pool.query('CREATE TABLE IF NOT EXISTS web_posts (id INT AUTO_INCREMENT PRIMARY KEY, title VARCHAR(120), tag VARCHAR(24), text TEXT, author VARCHAR(16), created BIGINT)');
   },
   async putCode(c) {
-    if (pool) await pool.query('REPLACE INTO web_codes (name_lc,name,uuid,code,staff,expires) VALUES (?,?,?,?,?,?)', [c.name.toLowerCase(), c.name, c.uuid, c.code, c.staff ? 1 : 0, c.expires]);
+    if (mdb) await mdb.collection('web_codes').replaceOne({ _id: c.name.toLowerCase() }, { _id: c.name.toLowerCase(), ...c }, { upsert: true });
+    else if (pool) await pool.query('REPLACE INTO web_codes (name_lc,name,uuid,code,staff,expires) VALUES (?,?,?,?,?,?)', [c.name.toLowerCase(), c.name, c.uuid, c.code, c.staff ? 1 : 0, c.expires]);
     else { fileDb.codes[c.name.toLowerCase()] = c; saveFile(); }
   },
-  async takeCode(name) { // lee y borra (un solo uso)
+  async takeCode(name) { // (sin uso: login usa peekCode + delCode)
     const k = name.toLowerCase();
     if (pool) {
       const [rows] = await pool.query('SELECT * FROM web_codes WHERE name_lc=?', [k]);
@@ -71,19 +79,27 @@ const store = {
   },
   async peekCode(name) { // para validar sin consumir si el código es incorrecto
     const k = name.toLowerCase();
+    if (mdb) return (await mdb.collection('web_codes').findOne({ _id: k })) || null;
     if (pool) { const [r] = await pool.query('SELECT * FROM web_codes WHERE name_lc=?', [k]); return r[0] ? { name: r[0].name, code: r[0].code, staff: !!r[0].staff, expires: +r[0].expires } : null; }
     return fileDb.codes[k] || null;
   },
-  async delCode(name) { const k = name.toLowerCase(); if (pool) await pool.query('DELETE FROM web_codes WHERE name_lc=?', [k]); else { delete fileDb.codes[k]; saveFile(); } },
+  async delCode(name) { const k = name.toLowerCase(); if (mdb) await mdb.collection('web_codes').deleteOne({ _id: k }); else if (pool) await pool.query('DELETE FROM web_codes WHERE name_lc=?', [k]); else { delete fileDb.codes[k]; saveFile(); } },
   async posts() {
+    if (mdb) return (await mdb.collection('web_posts').find().sort({ created: -1 }).limit(100).toArray()).map(({ _id, ...r }) => ({ id: _id, ...r }));
     if (pool) { const [r] = await pool.query('SELECT id,title,tag,text,author,created FROM web_posts ORDER BY created DESC LIMIT 100'); return r.map(x => ({ ...x, created: +x.created })); }
     return [...fileDb.posts].sort((a, b) => b.created - a.created);
   },
   async addPost(p) {
+    if (mdb) {
+      const c = await mdb.collection('web_counters').findOneAndUpdate({ _id: 'posts' }, { $inc: { seq: 1 } }, { upsert: true, returnDocument: 'after' });
+      const id = (c && c.seq) || Date.now();
+      await mdb.collection('web_posts').insertOne({ _id: id, ...p }); return { id, ...p };
+    }
     if (pool) { const [r] = await pool.query('INSERT INTO web_posts (title,tag,text,author,created) VALUES (?,?,?,?,?)', [p.title, p.tag, p.text, p.author, p.created]); return { id: r.insertId, ...p }; }
     const post = { id: fileDb.nextId++, ...p }; fileDb.posts.push(post); saveFile(); return post;
   },
   async delPost(id) {
+    if (mdb) return (await mdb.collection('web_posts').deleteOne({ _id: id })).deletedCount > 0;
     if (pool) { const [r] = await pool.query('DELETE FROM web_posts WHERE id=?', [id]); return r.affectedRows > 0; }
     const n = fileDb.posts.length; fileDb.posts = fileDb.posts.filter(p => p.id !== id); saveFile(); return fileDb.posts.length < n;
   }
@@ -134,16 +150,22 @@ const DEMO = {
   factions: [['Alpha', 2551], ['Bravo', 838], ['Charlie', 274]].map(([name, value]) => ({ name, value })),
   bans: [{ player: 'Cheater1', type: 'Ban', reason: 'Hacks (KillAura)', staff: 'Staff1', time: Date.now() - 864e5, until: -1 }, { player: 'Toxico2', type: 'Mute', reason: 'Insultos', staff: 'Staff2', time: Date.now() - 2 * 864e5, until: Date.now() + 5 * 864e5 }]
 };
+// Cada origen: MongoDB (sources.js) > MySQL (queries.js) > demo
+async function list(key, mongoFn, sqlQuery, demo) {
+  try {
+    if (SRC[key].uri) return { rows: await mongoFn(SRC[key]), demo: false };
+    if (pool) { const [rows] = await pool.query(sqlQuery); return { rows, demo: false }; }
+  } catch (e) { console.error(`[error] ${key}:`, e.message); return { rows: [], demo: false, error: true }; }
+  return { rows: demo, demo: true };
+}
 const getStats = () => cached('stats', 20000, async () => {
-  if (!pool) return { demo: true, practice: DEMO.practice, factions: DEMO.factions };
-  const [[p], [f]] = await Promise.all([pool.query(Q.practice), pool.query(Q.factions)]);
+  const [p, f] = await Promise.all([list('practice', mongoSrc.ranking, Q.practice, DEMO.practice), list('factions', mongoSrc.ranking, Q.factions, DEMO.factions)]);
   const norm = r => ({ name: String(r.name), value: Number(r.value) });
-  return { demo: false, practice: p.map(norm), factions: f.map(norm) };
+  return { demo: p.demo || f.demo, practice: p.rows.map(norm), factions: f.rows.map(norm) };
 });
 const getBans = () => cached('bans', 20000, async () => {
-  if (!pool) return { demo: true, bans: DEMO.bans };
-  const [rows] = await pool.query(Q.bans);
-  return { demo: false, bans: rows.map(r => ({ player: String(r.player), type: String(r.type), reason: String(r.reason || '—'), staff: String(r.staff || '—'), time: Number(r.time), until: Number(r.until) })) };
+  const r = await list('bans', mongoSrc.bans, Q.bans, DEMO.bans);
+  return { demo: r.demo, bans: r.rows.map(x => ({ player: String(x.player), type: String(x.type), reason: String(x.reason || '—'), staff: String(x.staff || '—'), time: Number(x.time), until: Number(x.until) })) };
 });
 
 // ---------- sesiones ----------
@@ -255,5 +277,5 @@ const server = http.createServer(async (req, res) => {
     if (!res.headersSent) send(res, e.message === 'json' || e.message === 'big' ? 400 : 500, { error: e.message === 'json' ? 'JSON inválido' : 'Error del servidor' });
   }
 });
-store.init().then(() => server.listen(cfg.port, () => console.log(`AkiraPvP web en http://localhost:${cfg.port}  (${pool ? 'MySQL' : 'modo archivo/demo'})`)))
+store.init().then(() => server.listen(cfg.port, () => console.log(`AkiraPvP web en http://localhost:${cfg.port}  (${pool ? 'MySQL' : mdb ? 'MongoDB' : 'modo archivo/demo'})`)))
   .catch(e => { console.error('No se pudo iniciar el almacenamiento:', e.message); process.exit(1); });
