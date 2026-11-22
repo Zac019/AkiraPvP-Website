@@ -2,7 +2,7 @@
 window.SITE = {
   name: "AkiraPvP", domain: "akirapvp.lat", ip: "akirapvp.lat",
   discord: "https://discord.gg/tu-invite",
-  storeUrl: "https://tienda.akirapvp.lat", // el servidor puede sobrescribirlo con STORE_URL
+  storeUrl: "https://store.akirapvp.lat/", // el servidor puede sobrescribirlo con STORE_URL
   tagline: ["PvP competitivo.", "En español."], sub: "Practice, Kitmap y Meetup.",
   openings: [
     { label: "Practice", at: "2026-12-05T00:00:00-04:00", text: "sábado, 5 de diciembre, 00:00" },
