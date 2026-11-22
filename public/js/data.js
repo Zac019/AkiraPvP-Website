@@ -1,7 +1,7 @@
 // Contenido estático del sitio. Lo dinámico (online, stats, sanciones, novedades) viene de la API.
 window.SITE = {
   name: "AkiraPvP", domain: "akirapvp.lat", ip: "akirapvp.lat",
-  discord: "https://discord.gg/tu-invite",
+  discord: "https://discord.gg/qs4msyqJZw",
   storeUrl: "https://store.akirapvp.lat/", // el servidor puede sobrescribirlo con STORE_URL
   tagline: ["PvP competitivo.", "En español."], sub: "Practice, Kitmap y Meetup.",
   openings: [
