@@ -10,10 +10,17 @@ window.SITE = {
   ],
   // Staff por rango: usa el nick real de Minecraft (la skin se carga sola)
   staff: [
-    {rank:"Owner",color:"#ff2d2d",members:[{name:"Owner1",role:"Fundador"},{name:"Owner2",role:"Co-Fundador"}]},
-    {rank:"Admin",color:"#ff7a2d",members:[{name:"Admin1",role:"Administrador"},{name:"Admin2",role:"Administrador"}]},
-    {rank:"Developer",color:"#55e07a",members:[{name:"Dev1",role:"Desarrollador"}]},
-    {rank:"Moderador",color:"#4d9bff",members:[{name:"Mod1",role:"Moderador"},{name:"Mod2",role:"Moderador"},{name:"Mod3",role:"Moderador"}]},
-    {rank:"Helper",color:"#c77dff",members:[{name:"Helper1",role:"Ayudante"},{name:"Helper2",role:"Ayudante"}]}
+    {rank:"Owner",color:"#ff2d2d",members:[{name:"19K2",role:"Owner"},{name:"Barboza_Vlogs",role:"Owner"}]},
+    {rank:"Co-Owner",color:"#bb4444",members:[{name:"CallMeLucky_",role:"Co-Owner"}]},
+    {rank:"Manager",color:"#800000",members:[{name:"SoyUnRex0",role:"Manager"},{name:"Tusead0h",role:"SS-Manager"}]},
+    {rank:"Coordinator",color:"#ff5555",members:[{name:"none",role:"Coordinator"}]},
+    {rank:"Developer",color:"#26a69a",members:[{name:"Noxvian",role:"Developer"},{name:"Greze",role:"Developer"},{name:"Noriiih",role:"Developer"},{name:"zdping",role:"Developer"}]},
+    {rank:"Platform-Admin",color:"#ff5555",members:[{name:"zKolah",role:"Platform-Admin"}]},
+    {rank:"SrAdmin",color:"#800000",members:[{name:"none",role:"SrAdmin"}]},
+    {rank:"Admin",color:"#ff5555",members:[{name:"ItzProfia",role:"Admin"}]},
+    {rank:"SrMod",color:"#00aa00",members:[{name:"none",role:"SrMod"}]},
+    {rank:"Mod+",color:"#206694",members:[{name:"7Maxxi_",role:"SS-Coordinator"}]},
+    {rank:"Mod",color:"#206694",members:[{name:"Oriyn",role:"Mod"}]},
+    {rank:"Trial-Mod",color:"#f1c40f",members:[{name:"MiguelRD0880",role:"Trial-Mod"}]}
   ]
 };
