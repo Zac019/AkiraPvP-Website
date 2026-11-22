@@ -6,3 +6,21 @@
 .hover\:bg-gold-hover:hover{background-color:#ff5a5a!important}
 body{background-image:radial-gradient(900px at 50% -10%,#ff2d2d1f,#0000 70%)!important}
 .staff-card img{image-rendering:pixelated}
+/* ---- fondo de la página ---- */
+body{background-image:linear-gradient(rgba(11,12,14,.50),rgba(11,12,14,.88)),url(../img/bg.jpg)!important;background-size:cover!important;background-position:center top!important;background-attachment:fixed!important;background-repeat:no-repeat!important}
+/* ---- botones propios ---- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:40px;padding:0 16px;border-radius:999px;font-size:14px;font-weight:600;cursor:pointer;border:1px solid #2E2E38;background:#121216;color:#f4f4f5;transition:border-color .15s,transform .15s,background .15s;white-space:nowrap}
+.btn:hover{border-color:#ff2d2d}.btn:active{transform:scale(.97)}
+.btn-red{background:#ff2d2d;border-color:#ff2d2d;color:#fff}.btn-red:hover{background:#ff5a5a;border-color:#ff5a5a}
+.btn-danger{color:#ff6666;border-color:#ff555555;height:34px;padding:0 12px;font-size:13px}
+.btn-danger:hover{background:#ff555520}
+.pill-user{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 16px 0 6px;border-radius:999px;background:#202026;font-size:14px;font-weight:600;color:#f4f4f5}
+.pill-user img{width:28px;height:28px;border-radius:999px}
+.field-area{height:auto;min-height:96px;padding:12px 14px;resize:vertical;font:inherit}
+select.field{appearance:auto}
+.nav-store{color:#ff2d2d}
+@media(max-width:767px){.hide-mobile{display:none}}
+.badge-staff{display:inline-block;border-radius:999px;background:#ff2d2d;color:#fff;font-size:11px;font-weight:800;padding:2px 10px;letter-spacing:.04em}
+.row2{display:grid;gap:12px;grid-template-columns:1fr}
+@media(min-width:640px){.row2{grid-template-columns:1fr 180px}}
+.text-data{color:#ff8a8a!important}
