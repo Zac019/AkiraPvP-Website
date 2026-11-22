@@ -1,0 +1,10 @@
+{
+  "name": "akirapvp-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Web de AkiraPvP: API (estado, stats, sanciones, novedades, login /web) + sitio estático",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" },
+  "dependencies": { "mysql2": "^3.11.0" }
+}
