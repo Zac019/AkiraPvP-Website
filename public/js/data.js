@@ -3,10 +3,10 @@ window.SITE = {
   name: "AkiraPvP", domain: "akirapvp.lat", ip: "akirapvp.lat",
   discord: "https://discord.gg/qs4msyqJZw",
   storeUrl: "https://store.akirapvp.lat/", // el servidor puede sobrescribirlo con STORE_URL
-  tagline: ["PvP competitivo.", "En español."], sub: "Practice, Kitmap y Meetup.",
+  tagline: ["PvP competitivo.", "En español."], sub: "Practice, Kitmap y HCF.",
   openings: [
     { label: "Practice", at: "2026-12-05T00:00:00-04:00", text: "sábado, 5 de diciembre, 00:00" },
-    { label: "Kitmap y Meetup", at: "2026-12-06T00:00:00-04:00", text: "domingo, 6 de diciembre, 00:00" }
+    { label: "Kitmap", at: "2026-12-06T00:00:00-04:00", text: "domingo, 6 de diciembre, 00:00" }
   ],
   // Staff por rango: usa el nick real de Minecraft (la skin se carga sola)
   staff: [
