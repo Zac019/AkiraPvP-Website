@@ -1,4 +1,4 @@
-# Sitio estilo battle.rip (estático)
+# Sitio estilo (estático)
 
 Abre `index.html` (o usa `npx serve .`). Sin build.
 
